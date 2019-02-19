@@ -13,9 +13,12 @@ class Config(object):
     # it should never be given out, and should be something that is difficult to break
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
 
-
-    # setup our database URI, which is the location of our database file/server
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'sqlite:///' + os.path.join(BASEDIR, 'app.db')
-
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    # uri for sql lite database
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+    #     'sqlite:///' + os.path.join(BASEDIR, 'app.db')
+
+    # uri for postgres Local database
+    # not for Heroku usage yet
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:Jhopama7@localhost:5432/ecommerce'

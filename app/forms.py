@@ -47,6 +47,3 @@ class RegisterForm(FlaskForm):
         if user is not None:
             flash('Sorry but those credentials are already in use')
             raise ValidationError('Email already taken.')
-
-
-    # TODO: create validation methods
