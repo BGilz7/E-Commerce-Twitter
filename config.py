@@ -20,4 +20,5 @@ class Config(object):
     #     'sqlite:///' + os.path.join(BASEDIR, 'app.db')
 
     # uri for postgres Local database
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \ 'postgresql://postgres:Jhopama7@localhost:5432/ecommerce'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+    'postgresql://postgres:Jhopama7@localhost:5432/ecommerce'
