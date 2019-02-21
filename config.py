@@ -20,5 +20,4 @@ class Config(object):
     #     'sqlite:///' + os.path.join(BASEDIR, 'app.db')
 
     # uri for postgres Local database
-    # not for Heroku usage yet
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:Jhopama7@localhost:5432/ecommerce'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \ 'postgresql://postgres:Jhopama7@localhost:5432/ecommerce'
